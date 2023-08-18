@@ -241,7 +241,7 @@ DELETE FROM cars WHERE brand='volvo';
 ```
 
 <p align="left">
-  <img src="https://preview.redd.it/mdt46lpf413a1.jpg?width=960&crop=smart&auto=webp&s=7cb5d2daf3b6d68ff8d8093c7f942adadee035da" />
+  <img height=300px src="https://preview.redd.it/mdt46lpf413a1.jpg?width=960&crop=smart&auto=webp&s=7cb5d2daf3b6d68ff8d8093c7f942adadee035da" />
 </p>
 > `DELETE` without `WHERE` removes all the records in a table
 
@@ -526,7 +526,7 @@ Restricts users from modifying a row or a table's content.
 
 #### Normalization
 <p align="left">
-  <img src="https://img.freepik.com/free-vector/kanban-method-concept-illustration_114360-9827.jpg?w=1380&t=st=1692363376~exp=1692363976~hmac=49034bc72f8ef9fa029d1fd40578636b2bcbdae9e64a9eb43d6654819ab08caa" />
+  <img height=100px src="https://img.freepik.com/free-vector/kanban-method-concept-illustration_114360-9827.jpg?w=1380&t=st=1692363376~exp=1692363976~hmac=49034bc72f8ef9fa029d1fd40578636b2bcbdae9e64a9eb43d6654819ab08caa" />
 </p>
 It refers to the way of organizing the data in a database. There are different *normal forms* that defines the level of normalization.
 > Normal forms are rules or guidlines that help organize and structure data in a way that reduce redundancy(having same copies) and imporove integrity
