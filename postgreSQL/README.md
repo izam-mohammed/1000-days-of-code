@@ -84,7 +84,7 @@ key INT NOT NULL );
 ```sql
 CREATE TABLE hello(
 key SERIAL PRIMARY KEY,
-name VARCHAR(30) REFERENCES costomers(name)
+name VARCHAR(30) REFERENCES customers(name)
 );
 ```
 
@@ -220,7 +220,7 @@ ALTER TABLE hola ALTER color TYPE VARCHAR(20);
 ```sql
 UPDATE cars
 SET color = 'red'
-WHERE brand = 'banz' ;
+WHERE brand = 'Banz' ;
 ```
 
 - **DROP** :
@@ -254,7 +254,7 @@ TRUNCATE TABLE table1
 <p align="left">
   <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.javatpoint.com%2Fdbms-sql-operator&psig=AOvVaw2szQ4ACVZP4zLHk57DCOR2&ust=1692453832174000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIiTuP6v5oADFQAAAAAdAAAAABAH" />
 </p>
-We can use different operators after `WHERE` clause
+We can use different operators after the `WHERE` clause
 
 - `=` equal to
 - `<` less than
@@ -348,54 +348,54 @@ SELECT UPPER(name) AS uppercase_name FROM employees;
 ```
 
 #### Role
-A concept that controls access and permission for users and groups. 2 types of role out there
-1. **User Roles** : There are roles that currespond to indevidual users.
+A concept that controls access and permission for users and groups. 2 types of roles out there
+1. **User Roles** : There are roles that correspond to individual users.
 
 ```sql
 CREATE ROLE myuser LOGIN PASSWORD 'mypassword';
 ```
-this creates a user role named `myuser` with a password. After that we are granding the previllages to the user in the following code
+this creates a user role named `myuser` with a password. After that, we are granting the privileges to the user in the following code
 ```sql
 GRAND SELECT, INSERT ON mytable TO myuser;
 ```
 
-2. **Group Roles** : Also known as *role membershp*, these are roles that can have other roles as memebers
+2. **Group Roles** : Also known as *role membershp*, these are roles that can have other roles as members
 
 ```sql
 CREATE ROLE mygroup;
 ```
 
-Assigning previleges -
+Assigning privileges -
 ```sql
 GRAND CREATE ON DATABASE  db_name TO mygroup;
 ```
 
 #### Grand
 [grand](https://thumbs.dreamstime.com/b/grants-red-vector-rubber-stamp-grant-grunge-white-background-illustration-145921446.jpg)
-It refers to the process of giving specific previleges or permission to users or roles on database objects
+It refers to the process of giving specific privileges or permission to users or roles on database objects
 
 ```sql
 GRAND SELECT ON employees TO report_viewer;
 ```
-In this example, it allowes the `report_viewer` to read data but not modify it
+In this example, it allows the `report_viewer` to read data but not modify it
 
 ```sql
 GRANT SELECT ON ALL TABLES IN SCHEMA public TO same_role;
 ```
-This grands the `SELECT` previlege on all tables in the `public` schema
+This grants the `SELECT` privilege on all tables in the `public` schema
 
 
 #### Difference between Scalar Function and Aggregate
 Scalar functions work on individual values within a row.
-Aggregate functions work on a group of rows to produce summery values
+Aggregate functions work on a group of rows to produce summary values
 
 #### Closure
-Closure allows a function to "remember" the values of variables that were present when function created , even the variables are no longer available
+The closure allows a function to "remember" the values of variables that were present when the function created, even if the variables are no longer available
 
 #### DML,DDL,DCL
-- **DML** : It's stands for *Data Manipulation Language*. A category of SQL statement that are used to manage and manipulate data in DB. Eg :- `INSERT`
+- **DML** : It's stands for *Data Manipulation Language*. A category of SQL statements that are used to manage and manipulate data in DB. Eg :- `INSERT`
 
-- **DDL** : Stands for *Data definition Language*. Set of commands that are used to define and manage structure of DB. Eg :- `CREATE TABLE`
+- **DDL** : Stands for *Data definition Language*. Set of commands that are used to define and manage the structure of DB. Eg :- `CREATE TABLE`
 
 - **DCL** : Stands for *Data Control Languge*. Managing permissions and access control of database objects.
 
@@ -449,7 +449,7 @@ GROUP BY customers.id,
 customers.name;
 ```
 
-Now, we can view named `order_counts` that beahves like a table.
+Now, we can view the named `order_counts` that behaves like a table.
 ```sql
 SELECT * FROM order_counts;
 ```
@@ -458,14 +458,14 @@ SELECT * FROM order_counts;
 <p align="left">
   <img src="https://miro.medium.com/v2/resize:fit:1400/0*4W8c1ne0Ny0Myy1f.png" />
 </p>
-Way to optimize the retrival of data from a database table
+Way to optimize the retrieval of data from a database table
 
 ```sql
 CREATE INDEX idx_last_name ON table_name(last_name);
 ```
 
-#### Previlages
-It control who can access or modify certain DB objects like tables, views, and fuctions.
+#### Privileges
+It control who can access or modify certain DB objects like tables, views, and functions.
 
 ```sql
 GRAND SELECT ON table_name TO user_or_role;
@@ -475,14 +475,14 @@ GRAND SELECT ON table_name TO user_or_role;
 GRAND ALL ON table_name TO user_or_all;
 ```
 
-*to remove previleges -*
+*to remove privileges -*
 ```sql
 REVOKE INSERT ON table_name FROM user_name;
 ```
 
-#### CASECADE
-It used in the contex of foreign key contex
-- **DELETE Casecade** : set `ON DELETE CASECADE` in child table, then all related records in the child table will delte automatically when delete than in parent tbale
+#### CASCADE
+It used in the context of foreign key context
+- **DELETE Cascade** : set `ON DELETE CASECADE` in the child table, then all related records in the child table will delete automatically when delete than in parent table
 ```sql
 CREATE TABLE parent (
 parent_id SERIAL PRIMARY KEY
@@ -490,15 +490,15 @@ parent_id SERIAL PRIMARY KEY
 
 CREATE TABLE child(
 id SERIAL PRIMARY KEY,
-second_id INTEGER REFERENCES parent(id) ON DELETE CASECADE
+second_id INTEGER REFERENCES parent(id) ON DELETE CASCADE
 );
 ```
 
-- **UPDATE Casecade** : similier to above
+- **UPDATE Cascade** : similar to above
 ```sql
 CREATE TABLE orders (
 id SERIAL PRIMARY KEY,
-cost_id INTEGER REFERENCES customers(id) ON UPDATE CASECADE
+cost_id INTEGER REFERENCES customers(id) ON UPDATE CASCADE
 );
 
 CREATE TABLE customers(
@@ -508,11 +508,11 @@ name TEXT
 ```
 
 #### Concurrency
-It is the ability of multiple transactions or processes to occur simultaniously without causing conflicts.
+It is the ability of multiple transactions or processes to occur simultaneously without causing conflicts.
 
 Techniques to handle concurrency
 1. **Locking** : Involve temporary blocking of access
-2. **Isolation Levels** : Define the extent to which transactions are isolated each other.
+2. **Isolation Levels** : Define the extent to which transactions are isolated from each other.
 
 #### Locks
 Restricts users from modifying a row or a table's content.
@@ -526,26 +526,26 @@ Restricts users from modifying a row or a table's content.
 
 #### Normalization
 <p align="left">
-  <img height=100px src="https://img.freepik.com/free-vector/kanban-method-concept-illustration_114360-9827.jpg?w=1380&t=st=1692363376~exp=1692363976~hmac=49034bc72f8ef9fa029d1fd40578636b2bcbdae9e64a9eb43d6654819ab08caa" />
+  <img height=300px src="https://img.freepik.com/free-vector/kanban-method-concept-illustration_114360-9827.jpg?w=1380&t=st=1692363376~exp=1692363976~hmac=49034bc72f8ef9fa029d1fd40578636b2bcbdae9e64a9eb43d6654819ab08caa" />
 </p>
-It refers to the way of organizing the data in a database. There are different *normal forms* that defines the level of normalization.
-> Normal forms are rules or guidlines that help organize and structure data in a way that reduce redundancy(having same copies) and imporove integrity
+It refers to the way of organizing the data in a database. There are different *normal forms* that define the level of normalization.
+> Normal forms are rules or guidelines that help organize and structure data in a way that reduces redundancy(having the same copies) and improves integrity
 
-1. **First Normal Form (1NF)** : Each column in in a table must hold only atomic (indivisible) values, and each row should be unique
-> If a cell contain multiple values, then it violates the rule
+1. **First Normal Form (1NF)** : Each column in a table must hold only atomic (indivisible) values, and each row should be unique
+> If a cell contains multiple values, then it violates the rule
 
-2. **Second Normal Form (2NF)** : Table must be in 1NF and each non-primary key column must be fully functionally dependent on the primary key
+2. **Second Normal Form (2NF)** : The table must be in 1NF and each non-primary key column must be fully functionally dependent on the primary key
 > Primary key should have some relation with each column values
 
-3. **Third Normal Form (3NF)** : Table must be in 2NF and no non-primary key column should depend on another non-primary key column *(transitive dependency)*
+3. **Third Normal Form (3NF)** : The table must be in 2NF and no non-primary key column should depend on another non-primary key column *(transitive dependency)*
 
 #### With 
-Used to create Common Table Expressins (CTE)
-> `CTE` is a temporary result set that can refer with SELECT, INSERT ...
-> It makes complex queries to more readable
+Used to create Common Table Expressions (CTE)
+> `CTE` is a temporary result set that can refer to SELECT, INSERT ...
+> It makes complex queries more readable
 ```sql
 WITH DepCount AS (
-   SELECT id ,COUNT(*) AS emp_count FROM empoloyees
+   SELECT id ,COUNT(*) AS emp_count FROM employees
 )
 
 SELECT * FROM DepCount;
@@ -557,7 +557,7 @@ SELECT * FROM DepCount;
 It can be made with `FOREIGN KEY`
 
 - **One-to-one** : One row in a table is associated with exactly one row in another table
-- **One-to-many** : One row is asociated with multiple rows in another table
-- **Many-to_many** : Multiple rows in a table associated to multiple rows in another table
+- **One-to-many** : One row is associated with multiple rows in another table
+- **Many-to_many** : Multiple rows in a table associated with multiple rows in another table
 
 #### 3 Schema Architecture
