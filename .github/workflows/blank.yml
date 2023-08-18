@@ -27,5 +27,5 @@ jobs:
 
       - name: md-linkcheck
         # You may pin to the exact commit or the version.
-        # uses: ocular-d/md-linkcheck-action@a9afa0766e93452c9af721ac878cb496011809e9
-        uses: ocular-d/md-linkcheck-action@1.0.2
+        uses: ocular-d/md-linkcheck-action@a9afa0766e93452c9af721ac878cb496011809e9
+        
