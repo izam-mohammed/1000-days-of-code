@@ -1,0 +1,29 @@
+
+# Top-most EditorConfig file
+root = true
+
+# Set the default charset to UTF-8
+[*]
+charset = utf-8
+
+# Use 4 spaces for indentation
+[*.js]
+indent_style = space
+indent_size = 4
+
+[*.html]
+indent_style = space
+indent_size = 4
+
+[*.css]
+indent_style = space
+indent_size = 4
+
+# End of line settings
+[*.md]
+end_of_line = lf
+trim_trailing_whitespace = true
+
+# Ensure a newline at the end of each file
+[*]
+insert_final_newline = true
