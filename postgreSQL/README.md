@@ -32,6 +32,11 @@ COMMIT;
 
 ```
 
+> `BEGIN` and `START` has same functionality
+
+#### Objects
+The various database componets that store and manage data, such as tables,indexes, functions , etc
+
 #### ACID properties
 Its 4 properties of a robust (well-designed and reliable for CRUD)  database
 ![acid](https://static.javatpoint.com/dbms/images/acid-properties-in-dbms.png)
@@ -329,17 +334,179 @@ SELECT AVG(price) FROM sales;
 - [More inbuilt aggregate functions](https://www.postgresql.org/docs/9.5/functions-aggregate.html)
 
 #### Scalar Functions
+Type of functions that take one or more argument and return one argument.
+```sql
+SELECT UPPER(name) AS uppercase_name FROM employees;
+```
+
+#### Role
+A concept that controls access and permission for users and groups. 2 types of role out there
+1. **User Roles** : There are roles that currespond to indevidual users.
+
+```sql
+CREATE ROLE myuser LOGIN PASSWORD 'mypassword';
+```
+this creates a user role named `myuser` with a password. After that we are granding the previllages to the user in the following code
+```sql
+GRAND SELECT, INSERT ON mytable TO myuser;
+```
+
+2. **Group Roles** : Also known as *role membershp*, these are roles that can have other roles as memebers
+
+```sql
+CREATE ROLE mygroup;
+```
+
+Assigning previleges -
+```sql
+GRAND CREATE ON DATABASE  db_name TO mygroup;
+```
+
+#### Grand
+[grand](https://thumbs.dreamstime.com/b/grants-red-vector-rubber-stamp-grant-grunge-white-background-illustration-145921446.jpg)
+It refers to the process of giving specific previleges or permission to users or roles on database objects
+
+```sql
+GRAND SELECT ON employees TO report_viewer;
+```
+In this example, it allowes the `report_viewer` to read data but not modify it
+
+```sql
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO same_role;
+```
+This grands the `SELECT` previlege on all tables in the `public` schema
+
+
+#### Difference between Scalar Function and Aggregate
+Scalar functions work on individual values within a row.
+Aggregate functions work on a group of rows to produce summery values
+
 #### Closure
+Closure allows a function to "remember" the values of variables that were present when function created , even the variables are no longer available
+
 #### DML,DDL,DCL
+- **DML** : It's stands for *Data Manipulation Language*. A category of SQL statement that are used to manage and manipulate data in DB. Eg :- `INSERT`
+
+- **DDL** : Stands for *Data definition Language*. Set of commands that are used to define and manage structure of DB. Eg :- `CREATE TABLE`
+
+- **DCL** : Stands for *Data Control Languge*. Managing permissions and access control of database objects.
+
 #### Triggers
-#### Indexes
-#### Schema
-#### previlages
+It can automatically execute a set of actions whenever a specific event occurs
+
+- **Creating Triggers** :
+```sql
+CREATE TRIGGER my_trigger 
+AFTER INSERT ON my_table
+FOR EACH ROW
+EXECUTE FUNCTION my_function();
+```
+
+- **Trigger Functions** :
+```sql
+CREATE FUNCTION my_function() RETURNS
+TRIGGER AS $$
+BEGIN 
+	INSERT INTO audit_log(action, table_name, changed_row_id)
+	VALUES ('INSERT', TG_TABLE_NAME, NEW.id);
+	RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+```
+
+- **Types of Triggers** : 
+ - *BEFORE Triggers* : Fire before the actual data modification.
+ - *AFTER Triggers* : Fire after the data modification.
+ - *INSTEAD OF Trigger* : Used with views
+
 #### View
+Save query that you can treat as a table.
+
+```sql
+CREATE VIEW order_counts AS
+SELECT customers.id, customers.name, 
+COUNT(orders.id) AS total_orders
+FROM customers
+LEFT JOIN orders ON customers.id = 
+orders.id
+GROUP BY customers.id,
+customers.name;
+```
+
+Now, we can view named `order_counts` that beahves like a table.
+```sql
+SELECT * FROM order_counts;
+```
+
+#### Indexes
+Way to optimize the retrival of data from a database table
+
+```sql
+CREATE INDEX idx_last_name ON table_name(last_name);
+```
+
+#### Previlages
+It control who can access or modify certain DB objects like tables, views, and fuctions.
+
+```sql
+GRAND SELECT ON table_name TO user_or_role;
+```
+
+```sql
+GRAND ALL ON table_name TO user_or_all;
+```
+
+*to remove previleges -*
+```sql
+REVOKE INSERT ON table_name FROM user_name;
+```
+
 #### CASECADE
+It used in the contex of foreign key contex
+- **DELETE Casecade** : set `ON DELETE CASECADE` in child table, then all related records in the child table will delte automatically when delete than in parent tbale
+```sql
+CREATE TABLE parent (
+parent_id SERIAL PRIMARY KEY
+);
+
+CREATE TABLE child(
+id SERIAL PRIMARY KEY,
+second_id INTEGER REFERENCES parent(id) ON DELETE CASECADE
+);
+```
+
+- **UPDATE Casecade** : similier to above
+```sql
+CREATE TABLE orders (
+id SERIAL PRIMARY KEY,
+cost_id INTEGER REFERENCES customers(id) ON UPDATE CASECADE
+);
+
+CREATE TABLE customers(
+id SERIAL PRIMARY KEY,
+name TEXT
+);
+```
+
+#### Concurrency
+It is the ability of multiple transactions or processes to occur simultaniously without causing conflicts.
+
+Techniques to handle concurrency
+1. **Locking** : Involve temporary blocking of access
+2. **Isolation Levels** : Define the extent to which transactions are isolated each other.
+
 #### Locks
+Restricts users from modifying a row or a table's content.
+
+- **Row Level Lock** :
+```sql
+
+```	
+- **Table Level Lock**
+- **Advisory Locks**
+
 #### Normalization
 #### Relations
 #### 3 Schema Architecture
 #### Concurrency
-#### With python
+#### With 
