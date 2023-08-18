@@ -561,3 +561,37 @@ It can be made with `FOREIGN KEY`
 - **Many-to_many** : Multiple rows in a table associated with multiple rows in another table
 
 #### 3 Schema Architecture
+also known as the ANSI-SPARC architecture, is a way to organize and manage data in a database system.
+
+1. **External Schema (User View)**:
+   This is the schema that users interact with directly.
+   ```sql
+	SELECT student_name, course_name, grade
+	FROM student_grades;
+   ```
+
+2. **Conceptual Schema (Logical View)**:
+   This schema represents the overall logical structure of the entire database, including the relationships between different pieces of data.
+   ```
+   CREATE TABLE Students (
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(50)
+   );
+
+   CREATE TABLE Courses (
+    course_id INT PRIMARY KEY,
+    course_name VARCHAR(100)
+   );
+
+   CREATE TABLE Grades (
+    student_id INT,
+    course_id INT,
+    grade CHAR(1),
+    PRIMARY KEY (student_id, course_id)
+   );
+   ```
+
+3. **Internal Schema (Physical View)** :
+   This is the lowest level of schema, dealing with how the data is physically stored on the hardware. 
+
+
