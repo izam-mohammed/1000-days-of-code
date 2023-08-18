@@ -51,20 +51,20 @@ SELECT * FROM employee WHERE age>30;
 #### Table
 Collection of related data held in a table format. Table have **rows** and **columns**
 
-#### Constaints
+#### Constraints
 Rules that can apply to a column
 
-<p align="center">
+<p align="left">
   <img src="https://static.javatpoint.com/postgre/images/postgresql-constraints.png" />
 </p>
 
-- **Primary Key** : Unique indentifier of a row, not null and unique
+- **Primary Key** : Unique identifier of a row, not null and unique
 ```sql
-CREATE TABLE stdent(
+CREATE TABLE student(
 key SERIAL PRIMARY KEY);
 ```
 
-- **Unique**: The col contain only unique values
+- **Unique**: The col contains only unique values
 ```sql
 CREATE TABLE hello(
 key INT UNIQUE );
@@ -76,7 +76,7 @@ CREATE TABLE hello(
 key INT NOT NULL );
 ```
 
-- **Foreign key** : All values in this column match value in other table's column
+- **Foreign key** : All values in this column match value in the other table's column
 ```sql
 CREATE TABLE hello(
 key SERIAL PRIMARY KEY,
@@ -84,7 +84,7 @@ name VARCHAR(30) REFERENCES costomers(name)
 );
 ```
 
-- **Check constraint**: A condition that apply for the data in a column
+- **Check constraint**: A condition that applies to the data in a column
 ```sql
 CREATE TABLE hello(
 key SERIAL PRIMARY KEY,
@@ -92,7 +92,7 @@ age INT CHECK (age >= 18)
 );
 ```
 
-- **Exclusion** : It evaluate comparison of 2 rows in a table
+- **Exclusion** : It evaluates the comparison of 2 rows in a table
 ```sql
 CREATE TABLE company(
 name TEXT,
@@ -103,28 +103,30 @@ EXCLUDE USING  gist (name WITH =, age WITH <>)
 > Maybe you need to execute the command `CREATE EXTENTION btree_gist`, once per db
 
 #### Main Datatypes 
-There are plenty of data types in postgreSQL. Here are some
-![dtypes](https://static.javatpoint.com/postgre/images/postgresql-data-types.png)
+There are plenty of data types in PostgreSQL. Here are some
+<p align="left">
+  <img src="https://static.javatpoint.com/postgre/images/postgresql-data-types.png" />
+</p>
 
 - **Integer** : 1,4,-2 ...
 - **numeric(whole num, floating count)** : 1.42, 4.345
 - **bigint** : stores big values
 - **real** : wide variety of numbers
 - **varchar(n)** : variable-length character string.
-- **text** : varchar with no defind length
+- **text** : varchar with no defined length
 - **date** : stores date value
 - **time** : stores a time of day.
 - **timestamp** : stores time and date
 - **boolean** : true or false
-- **serial** : auto increment integer
-- **json** : stores json data
-- **jsonb** : binary representation of json data
+- **serial** : auto-increment integer
+- **json** : stores JSON data
+- **jsonb** : binary representation of JSON data
 - **UUID** : (Universally Unique Identifiers) Designed to be unique.
 
 #### Clauses
-It is special keywords used in SQL to perform various query.
+It is the special keyword used in SQL to perform various queries.
 
-- **SELECT** : Used to fetch data from table
+- **SELECT** : Used to fetch data from the table
 ```sql
 SELECT col1, col2 FROM table1;
 ```
@@ -132,10 +134,10 @@ SELECT col1, col2 FROM table1;
 SELECT * FROM table2;
 ```
 ```sql
-SELECT DISTINCT coutry FROM customers;
+SELECT DISTINCT country FROM customers;
 ```
 
-- **WHERE** : Filter data based on specific condition.
+- **WHERE** : Filter data based on specific conditions.
 ```sql
 SELECT * FROM orders WHERE date > '2023-01-01'
 ```
@@ -145,32 +147,32 @@ SELECT * FROM orders WHERE date > '2023-01-01'
 SELECT name, age FROM students ORDER BY age DESC;
 ```
 
-- **GROUP BY** : Used to group rows that have the same value in specific columns. It often use SUM,AVG
+- **GROUP BY** : Used to group rows that have the same value in specific columns. It often uses SUM, AVG
 ```sql
 SELECT id, SUM(price) AS avg FROM products;
 ```
 
-- **HAVING** : Used to specify condition for aggregate values.
+- **HAVING** : Used to specify conditions for aggregate values.
 ```sql
 SELECT id, AVG(price) AS avg FROM products GROUP BY id HAVING AVG(price) > 3
 ```
-- **JION** : Used to combine rows from two or more table based on related columns
+- **JION** : Used to combine rows from two or more tables based on related columns
  - **INNER JOIN** : returns only the rows that have matching values in both tables.
 ```sql
 SELECT Customers.name, Orders.date FROM Customers INNER JOIN Orders ON Customers.id =  Orders.id;
 ```
 
- - **LEFT JOIN** : Its actually `LEFT OUTER JOIN` that return left table that matching rows in the left table
+ - **LEFT JOIN** : It's actually `LEFT OUTER JOIN` that return the left table that matches rows in the left table
 ```sql
 SELECT Customers.name, Orders.date FROM Customers LEFT JOIN Orders ON Customers.id  = Orders.id;
 ```
 
-- **RIGHT JOIN** : Its actually `RIGHT OUTER JOIN` that return right table that matching rows in the right table
+- **RIGHT JOIN** : It's actually `RIGHT OUTER JOIN` that returns the right table that matches rows in the right table
 ```sql
 SELECT Customers.name, Orders.date FROM Customers RIGHT JOIN Orders ON Customers.id = Orders.id;
 ```
 
-- **FULL JOIN** : Its actually `LEFT OUTER JION` that return all rows from both tables and fill in NULL values where no match.
+- **FULL JOIN** : It's actually `LEFT OUTER JION` that returns all rows from both tables and fill in NULL values where no match.
 ```sql
 SELECT Customers.name, Orders.date FROM Customers FULL JOIN Orders ON Customers.id = Orders.id;
 ```
@@ -181,7 +183,9 @@ SELECT * FROM Customers CROSS JOIN Products;
 ```
 
 #### CRUD operations
-![CRUD](https://static.javatpoint.com/sqlpages/images/crud-operations-in-sql1.jpg)
+<p align="left">
+  <img src="https://static.javatpoint.com/sqlpages/images/crud-operations-in-sql1.jpg" />
+</p>
 
 - **CREATE** : 
 ```sql
@@ -239,13 +243,13 @@ TRUNCATE TABLE table1
 #### Operators
 We can use different operators after `WHERE` clause
 
-- `=` eqal to
+- `=` equal to
 - `<` less than
 - `>` greater than
 - `<=` less than or equal to
 - `>=` greater than or equal to
 - `<>` and `!=` not equal to 
-- `LIKE` check if value matches a pattern
+- `LIKE` check if the value matches a pattern
  - `_` represents one character
  - `%` represents n number of characters
 ```sql
@@ -263,19 +267,19 @@ UNION
 SELECT id, name FROM customers
 ;
 ```
-- `EXISTS` used to test anything in sub-query *It only returns boolean*
+- `EXISTS` used to test anything in sub-query *It only returns a boolean*
 ```sql
 SELECT name FROM customers 
 WHERE EXISTS(
 SELECT id FROM orders WHERE id=costomers.id);
 ```
-- `ANY` compare between a single column value and a range values *only returns boolean*
+- `ANY` compare between a single column value and a range value *only returns a boolean*
 ```sql
 SELECT name FROM products 
 WHERE id = ANY(
-SELECT id FROM costumers);
+SELECT id FROM customers);
 ```
-- `ALL` compare between a single column val and a range value *only return boolean* and can be used with `SELECT`,`WHERE`,`HIVING`
+- `ALL` compare between a single column value and a range value *only return boolean* and can be used with `SELECT`,`WHERE`,`HIVING`
 ```sql
 SELECT name FROM employees 
 WHERE age = ALL(
@@ -283,13 +287,16 @@ SELECT age FROM admins);
 ```
 
 #### Aliasing
-Giving temporary name to a table or column with `AS`
+Giving a temporary name to a table or column with `AS`
+<p align="left">
+  <img src="https://s33046.pcdn.co/wp-content/uploads/2020/02/using-sql-as-keyword-and-join-clause--624x335.png" />
+</p>
 ```sql
 SELECT first_name AS name FROM Customers;
 ```
 
 #### CASE expression
-It is like an if-then-else statement in sql
+It is like an if-then-else statement in SQL
 ```sql
 SELECT product, 
 CASE
@@ -302,8 +309,10 @@ FROM products;
 ```
 
 #### Aggregate Functions
-It is special functions in SQL that allow to perform operations
-![aggregate](https://miro.medium.com/v2/resize:fit:640/format:webp/1*ru43ZSkVFHrJw3n9sLjBHA.jpeg)
+It is special functions in SQL that allow performing operations
+<p align="left">
+  <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*ru43ZSkVFHrJw3n9sLjBHA.jpeg" />
+</p>
 
 - **SUM()** :
 ```sql
@@ -313,10 +322,10 @@ SELECT SUM(price) FROM sales;
 ```sql
 SELECT AVG(price) FROM sales;
 ```
-- **COUNT()** : Calculate count , syntax is same as `SUM`
+- **COUNT()** : Calculate count, syntax is same as `SUM`
 - **MIN()**
 - **MAX()**
-- **BOOL_AND()** : argumets and return value are bool
+- **BOOL_AND()** : arguments and return value are bool
 - [More inbuilt aggregate functions](https://www.postgresql.org/docs/9.5/functions-aggregate.html)
 
 #### Scalar Functions
