@@ -2,11 +2,10 @@
 ![postgres](https://www.ovhcloud.com/sites/default/files/styles/text_media_horizontal/public/2021-09/ECX-1909_Hero_PostgreSQL_600x400%402x.png)
 
 #### What is a database
-It's a structured collection of data that is organized, stored, and managed to do CRUD operations
+ It's a structured collection of data that is organized, stored, and managed to do CRUD operations 
 
 #### What is DBMS
-It stands for Data Base Management System. It's the software that allows CRUD operations.
-Eg :- MySQL , PostgreSQL
+ It stands for Data Base Management System. It's the software that allows CRUD operations. Eg :- MySQL , PostgreSQL
 
 #### Difference between DBMS and RDBMS
 In DBMS, the data is stored as a file, whereas in RDBMS, the data is stored in the form of tables
@@ -225,6 +224,7 @@ WHERE brand = 'banz' ;
 ```
 
 - **DROP** :
+
 ```sql
 DROP DATABASE hola;
 ```
@@ -240,12 +240,20 @@ ALTER TABLE cars DROP COLUMN model ;
 DELETE FROM cars WHERE brand='volvo';
 ```
 
+<p align="left">
+  <img src="https://preview.redd.it/mdt46lpf413a1.jpg?width=960&crop=smart&auto=webp&s=7cb5d2daf3b6d68ff8d8093c7f942adadee035da" />
+</p>
+> `DELETE` without `WHERE` removes all the records in a table
+
 - **TRUNCATE** : Remove all the rows in a table
 ```sql
 TRUNCATE TABLE table1
 ```
 
 #### Operators
+<p align="left">
+  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.javatpoint.com%2Fdbms-sql-operator&psig=AOvVaw2szQ4ACVZP4zLHk57DCOR2&ust=1692453832174000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIiTuP6v5oADFQAAAAAdAAAAABAH" />
+</p>
 We can use different operators after `WHERE` clause
 
 - `=` equal to
@@ -392,6 +400,10 @@ Closure allows a function to "remember" the values of variables that were presen
 - **DCL** : Stands for *Data Control Languge*. Managing permissions and access control of database objects.
 
 #### Triggers
+<p align="left">
+   <img src="http://pages.di.unipi.it/ghelli/didattica/bdldoc/B19306_01/server.102/b14220/img/cncpt076.gif" />
+</p>
+
 It can automatically execute a set of actions whenever a specific event occurs
 
 - **Creating Triggers** :
@@ -420,6 +432,10 @@ $$ LANGUAGE plpgsql;
  - *INSTEAD OF Trigger* : Used with views
 
 #### View
+<p align="left">
+  <img src="https://static.javatpoint.com/sqlserver/images/view-in-sql-server.png" />
+</p>
+
 Save query that you can treat as a table.
 
 ```sql
@@ -439,6 +455,9 @@ SELECT * FROM order_counts;
 ```
 
 #### Indexes
+<p align="left">
+  <img src="https://miro.medium.com/v2/resize:fit:1400/0*4W8c1ne0Ny0Myy1f.png" />
+</p>
 Way to optimize the retrival of data from a database table
 
 ```sql
@@ -498,15 +517,47 @@ Techniques to handle concurrency
 #### Locks
 Restricts users from modifying a row or a table's content.
 
-- **Row Level Lock** :
-```sql
-
-```	
+- **Shared Lock**
+- **Exclusive Lock**
+- **Row Level Lock**	
 - **Table Level Lock**
-- **Advisory Locks**
+- **Page-level Lock**
+- **Lock modes**
 
 #### Normalization
-#### Relations
-#### 3 Schema Architecture
-#### Concurrency
+<p align="left">
+  <img src="https://img.freepik.com/free-vector/kanban-method-concept-illustration_114360-9827.jpg?w=1380&t=st=1692363376~exp=1692363976~hmac=49034bc72f8ef9fa029d1fd40578636b2bcbdae9e64a9eb43d6654819ab08caa" />
+</p>
+It refers to the way of organizing the data in a database. There are different *normal forms* that defines the level of normalization.
+> Normal forms are rules or guidlines that help organize and structure data in a way that reduce redundancy(having same copies) and imporove integrity
+
+1. **First Normal Form (1NF)** : Each column in in a table must hold only atomic (indivisible) values, and each row should be unique
+> If a cell contain multiple values, then it violates the rule
+
+2. **Second Normal Form (2NF)** : Table must be in 1NF and each non-primary key column must be fully functionally dependent on the primary key
+> Primary key should have some relation with each column values
+
+3. **Third Normal Form (3NF)** : Table must be in 2NF and no non-primary key column should depend on another non-primary key column *(transitive dependency)*
+
 #### With 
+Used to create Common Table Expressins (CTE)
+> `CTE` is a temporary result set that can refer with SELECT, INSERT ...
+> It makes complex queries to more readable
+```sql
+WITH DepCount AS (
+   SELECT id ,COUNT(*) AS emp_count FROM empoloyees
+)
+
+SELECT * FROM DepCount;
+```
+#### Relations
+<p align="left">
+  <img src="https://media.istockphoto.com/id/1352564117/vector/database-sql-structured-query-language-people-team-discuss-coding-for-storing-data-in-server.jpg?s=612x612&w=0&k=20&c=eRlvikJYlY8tJ8pVxgZFUv5GLgQbTy_rq18jKLZxq8A=" />
+</p>
+It can be made with `FOREIGN KEY`
+
+- **One-to-one** : One row in a table is associated with exactly one row in another table
+- **One-to-many** : One row is asociated with multiple rows in another table
+- **Many-to_many** : Multiple rows in a table associated to multiple rows in another table
+
+#### 3 Schema Architecture
