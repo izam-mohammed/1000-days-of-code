@@ -55,7 +55,7 @@ Collection of related data held in a table format. Table have **rows** and **col
 Rules that can apply to a column
 
 
-- **Primary Key** : Unique indentifier of a column, not null and unique
+- **Primary Key** : Unique indentifier of a row, not null and unique
 ```sql
 CREATE TABLE stdent(
 key SERIAL PRIMARY KEY);
@@ -127,6 +127,9 @@ SELECT col1, col2 FROM table1;
 ```sql
 SELECT * FROM table2;
 ```
+```sql
+SELECT DISTINCT coutry FROM customers;
+```
 
 - **WHERE** : Filter data based on specific condition.
 ```sql
@@ -145,8 +148,183 @@ SELECT id, SUM(price) AS avg FROM products;
 
 - **HAVING** : Used to specify condition for aggregate values.
 ```sql
-SELECT id, AVG(price) AS avg FROM products GROUP BY id HAVING AVG(price) > 3```
+SELECT id, AVG(price) AS avg FROM products GROUP BY id HAVING AVG(price) > 3
+```
+- **JION** : Used to combine rows from two or more table based on related columns
+ - **INNER JOIN** : returns only the rows that have matching values in both tables.
+```sql
+SELECT Customers.name, Orders.date FROM Customers INNER JOIN Orders ON Customers.id =  Orders.id;
+```
 
+ - **LEFT JOIN** : Its actually `LEFT OUTER JOIN` that return left table that matching rows in the left table
+```sql
+SELECT Customers.name, Orders.date FROM Customers LEFT JOIN Orders ON Customers.id  = Orders.id;
+```
 
+- **RIGHT JOIN** : Its actually `RIGHT OUTER JOIN` that return right table that matching rows in the right table
+```sql
+SELECT Customers.name, Orders.date FROM Customers RIGHT JOIN Orders ON Customers.id = Orders.id;
+```
 
+- **FULL JOIN** : Its actually `LEFT OUTER JION` that return all rows from both tables and fill in NULL values where no match.
+```sql
+SELECT Customers.name, Orders.date FROM Customers FULL JOIN Orders ON Customers.id = Orders.id;
+```
 
+- **CROSS JOIN** : Combines every row from one table with every row from another table
+```sql
+SELECT * FROM Customers CROSS JOIN Products;
+```
+
+#### CRUD operations
+
+- **CREATE** : 
+```sql
+CREATE DATABASE hola;
+```
+```sql
+CREATE TABLE costumers(
+id INT PRIMARY KEY,
+name VARCHAR(50),
+age INT CHECK (age >18)
+);
+```
+
+- **INSERT INTO** : 
+```sql
+INSERT INTO cars(brand, model) VALUES ('tesla' ,'gt');
+```
+
+- **ALTER** :
+```sql
+ALTER TABLE hola ADD color VARCHAR(30);
+```
+```sql
+ALTER TABLE hola ALTER color TYPE VARCHAR(20);
+```
+
+- **UPDATE** :
+```sql
+UPDATE cars
+SET color = 'red'
+WHERE brand = 'banz' ;
+```
+
+- **DROP** :
+```sql
+DROP DATABASE hola;
+```
+```sql
+DROP TABLE table1 ;
+```
+```sql
+ALTER TABLE cars DROP COLUMN model ;
+```
+
+- **DELETE** : for delete row
+```sql
+DELETE FROM cars WHERE brand='volvo';
+```
+
+- **TRUNCATE** : Remove all the rows in a table
+```sql
+TRUNCATE TABLE table1
+```
+
+#### Operators
+We can use different operators after `WHERE` clause
+
+- `=` eqal to
+- `<` less than
+- `>` greater than
+- `<=` less than or equal to
+- `>=` greater than or equal to
+- `<>` and `!=` not equal to 
+- `LIKE` check if value matches a pattern
+ - `_` represents one character
+ - `%` represents n number of characters
+```sql
+SELECT * FROM cars WHERE model LIKE '__ha%';
+```
+- `ILIKE` same as `LIKE` but Case sensitive
+- `AND`, `OR`
+- `IN` and `BETWEEN` checks the value in that particular range
+- `IS NULL` check null or not
+- `NOT` make negative results
+- `UNION` combine 2 result set
+```sql
+SELECT id ,name FROM products 
+UNION
+SELECT id, name FROM customers
+;
+```
+- `EXISTS` used to test anything in sub-query *It only returns boolean*
+```sql
+SELECT name FROM customers 
+WHERE EXISTS(
+SELECT id FROM orders WHERE id=costomers.id);
+```
+- `ANY` compare between a single column value and a range values *only returns boolean*
+```sql
+SELECT name FROM products 
+WHERE id = ANY(
+SELECT id FROM costumers);
+```
+- `ALL` compare between a single column val and a range value *only return boolean* and can be used with `SELECT`,`WHERE`,`HIVING`
+```sql
+SELECT name FROM employees 
+WHERE age = ALL(
+SELECT age FROM admins);
+```
+
+#### Aliasing
+Giving temporary name to a table or column with `AS`
+```sql
+SELECT first_name AS name FROM Customers;
+```
+
+#### CASE expression
+It is like an if-then-else statement in sql
+```sql
+SELECT product, 
+CASE
+  WHEN price <30 THEN 'low'
+  WHEN price >50 THEN 'high'
+ELSE
+  'normal'
+END AS level
+FROM products;
+```
+
+#### Aggregate Functions
+It is special functions in SQL that allow to perform operations
+
+- **SUM()** :
+```sql
+SELECT SUM(price) FROM sales;
+```
+- **AVG()** :
+```sql
+SELECT AVG(price) FROM sales;
+```
+- **COUNT()** : Calculate count , syntax is same as `SUM`
+- **MIN()**
+- **MAX()**
+- **BOOL_AND()** : argumets and return value are bool
+- [More inbuilt aggregate functions](https://www.postgresql.org/docs/9.5/functions-aggregate.html)
+
+#### Scalar Functions
+#### Closure
+#### DML,DDL,DCL
+#### Triggers
+#### Indexes
+#### Schema
+#### previlages
+#### View
+#### CASECADE
+#### Locks
+#### Normalization
+#### Relations
+#### 3 Schema Architecture
+#### Concurrency
+#### With python
