@@ -53,7 +53,10 @@ Collection of related data held in a table format. Table have **rows** and **col
 
 #### Constaints
 Rules that can apply to a column
-![constraints](https://static.javatpoint.com/postgre/images/postgresql-constraints.png)
+
+<p align="center">
+  <img src="https://static.javatpoint.com/postgre/images/postgresql-constraints.png" />
+</p>
 
 - **Primary Key** : Unique indentifier of a row, not null and unique
 ```sql
