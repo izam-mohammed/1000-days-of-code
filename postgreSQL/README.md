@@ -34,6 +34,7 @@ COMMIT;
 
 #### ACID properties
 Its 4 properties of a robust (well-designed and reliable for CRUD)  database
+![acid](https://static.javatpoint.com/dbms/images/acid-properties-in-dbms.png)
 
 1. **Atomacity**: All operations in a transaction are either completed or none of them applied at all.
 2. **Consistency**: DB should follow predefined rules like `this column should be int`
@@ -52,7 +53,7 @@ Collection of related data held in a table format. Table have **rows** and **col
 
 #### Constaints
 Rules that can apply to a column
-
+![constraints](https://static.javatpoint.com/postgre/images/postgresql-constraints.png)
 
 - **Primary Key** : Unique indentifier of a row, not null and unique
 ```sql
@@ -100,6 +101,7 @@ EXCLUDE USING  gist (name WITH =, age WITH <>)
 
 #### Main Datatypes 
 There are plenty of data types in postgreSQL. Here are some
+![dtypes](https://static.javatpoint.com/postgre/images/postgresql-data-types.png)
 
 - **Integer** : 1,4,-2 ...
 - **numeric(whole num, floating count)** : 1.42, 4.345
@@ -176,6 +178,7 @@ SELECT * FROM Customers CROSS JOIN Products;
 ```
 
 #### CRUD operations
+![CRUD](https://static.javatpoint.com/sqlpages/images/crud-operations-in-sql1.jpg)
 
 - **CREATE** : 
 ```sql
@@ -297,6 +300,7 @@ FROM products;
 
 #### Aggregate Functions
 It is special functions in SQL that allow to perform operations
+![aggregate](https://miro.medium.com/v2/resize:fit:640/format:webp/1*ru43ZSkVFHrJw3n9sLjBHA.jpeg)
 
 - **SUM()** :
 ```sql
