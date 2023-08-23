@@ -161,30 +161,30 @@ SELECT id, SUM(price) AS avg FROM products;
 SELECT id, AVG(price) AS avg FROM products GROUP BY id HAVING AVG(price) > 3
 ```
 - **JION** : Used to combine rows from two or more tables based on related columns
- - **INNER JOIN** : returns only the rows that have matching values in both tables.
-```sql
-SELECT Customers.name, Orders.date FROM Customers INNER JOIN Orders ON Customers.id =  Orders.id;
-```
-
- - **LEFT JOIN** : It's actually `LEFT OUTER JOIN` that return the left table that matches rows in the left table
-```sql
-SELECT Customers.name, Orders.date FROM Customers LEFT JOIN Orders ON Customers.id  = Orders.id;
-```
-
-- **RIGHT JOIN** : It's actually `RIGHT OUTER JOIN` that returns the right table that matches rows in the right table
-```sql
-SELECT Customers.name, Orders.date FROM Customers RIGHT JOIN Orders ON Customers.id = Orders.id;
-```
-
-- **FULL JOIN** : It's actually `LEFT OUTER JION` that returns all rows from both tables and fill in NULL values where no match.
-```sql
-SELECT Customers.name, Orders.date FROM Customers FULL JOIN Orders ON Customers.id = Orders.id;
-```
-
-- **CROSS JOIN** : Combines every row from one table with every row from another table
-```sql
-SELECT * FROM Customers CROSS JOIN Products;
-```
+	- **INNER JOIN** : returns only the rows that have matching values in both tables.
+	```sql
+	SELECT Customers.name, Orders.date FROM Customers INNER JOIN Orders ON Customers.id =  Orders.id;
+	```
+	
+	 - **LEFT JOIN** : It's actually `LEFT OUTER JOIN` that return the left table that matches rows in the left table
+	```sql
+	SELECT Customers.name, Orders.date FROM Customers LEFT JOIN Orders ON Customers.id  = Orders.id;
+	```
+	
+	- **RIGHT JOIN** : It's actually `RIGHT OUTER JOIN` that returns the right table that matches rows in the right table
+	```sql
+	SELECT Customers.name, Orders.date FROM Customers RIGHT JOIN Orders ON Customers.id = Orders.id;
+	```
+	
+	- **FULL JOIN** : It's actually `LEFT OUTER JION` that returns all rows from both tables and fill in NULL values where no match.
+	```sql
+	SELECT Customers.name, Orders.date FROM Customers FULL JOIN Orders ON Customers.id = Orders.id;
+	```
+	
+	- **CROSS JOIN** : Combines every row from one table with every row from another table
+	```sql
+	SELECT * FROM Customers CROSS JOIN Products;
+	```
 
 #### CRUD operations
 <p align="left">
@@ -243,7 +243,8 @@ DELETE FROM cars WHERE brand='volvo';
 <p align="left">
   <img height=300px src="https://preview.redd.it/mdt46lpf413a1.jpg?width=960&crop=smart&auto=webp&s=7cb5d2daf3b6d68ff8d8093c7f942adadee035da" />
 </p>
-> `DELETE` without `WHERE` removes all the records in a table
+
+>`DELETE` without `WHERE` removes all the records in a table
 
 - **TRUNCATE** : Remove all the rows in a table
 ```sql
@@ -252,7 +253,7 @@ TRUNCATE TABLE table1
 
 #### Operators
 <p align="left">
-  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.javatpoint.com%2Fdbms-sql-operator&psig=AOvVaw2szQ4ACVZP4zLHk57DCOR2&ust=1692453832174000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIiTuP6v5oADFQAAAAAdAAAAABAH" />
+  <img src="https://cdn.educba.com/academy/wp-content/uploads/2020/03/Comparison-Operators-in-SQL.png" />
 </p>
 We can use different operators after the `WHERE` clause
 
@@ -263,11 +264,11 @@ We can use different operators after the `WHERE` clause
 - `>=` greater than or equal to
 - `<>` and `!=` not equal to 
 - `LIKE` check if the value matches a pattern
- - `_` represents one character
- - `%` represents n number of characters
-```sql
-SELECT * FROM cars WHERE model LIKE '__ha%';
-```
+	- `_` represents one character
+	- `%` represents n number of characters
+	```sql
+	SELECT * FROM cars WHERE model LIKE '__ha%';
+	```
 - `ILIKE` same as `LIKE` but Case sensitive
 - `AND`, `OR`
 - `IN` and `BETWEEN` checks the value in that particular range
@@ -301,9 +302,11 @@ SELECT age FROM admins);
 
 #### Aliasing
 Giving a temporary name to a table or column with `AS`
+
 <p align="left">
   <img src="https://s33046.pcdn.co/wp-content/uploads/2020/02/using-sql-as-keyword-and-join-clause--624x335.png" />
 </p>
+
 ```sql
 SELECT first_name AS name FROM Customers;
 ```
@@ -371,7 +374,10 @@ GRAND CREATE ON DATABASE  db_name TO mygroup;
 ```
 
 #### Grand
-[grand](https://thumbs.dreamstime.com/b/grants-red-vector-rubber-stamp-grant-grunge-white-background-illustration-145921446.jpg)
+<p>
+<img height=200 src='https://thumbs.dreamstime.com/b/grants-red-vector-rubber-stamp-grant-grunge-white-background-illustration-145921446.jpg'/>
+</p>
+
 It refers to the process of giving specific privileges or permission to users or roles on database objects
 
 ```sql
@@ -384,15 +390,14 @@ GRANT SELECT ON ALL TABLES IN SCHEMA public TO same_role;
 ```
 This grants the `SELECT` privilege on all tables in the `public` schema
 
-
-#### Difference between Scalar Function and Aggregate
-Scalar functions work on individual values within a row.
-Aggregate functions work on a group of rows to produce summary values
+> **Scalar functions** work on individual values within a row. <br>
+> **Aggregate functions** work on a group of rows to produce summary values
 
 #### Closure
 The closure allows a function to "remember" the values of variables that were present when the function created, even if the variables are no longer available
 
-#### DML,DDL,DCL
+#### DML, DDL, DCL
+
 - **DML** : It's stands for *Data Manipulation Language*. A category of SQL statements that are used to manage and manipulate data in DB. Eg :- `INSERT`
 
 - **DDL** : Stands for *Data definition Language*. Set of commands that are used to define and manage the structure of DB. Eg :- `CREATE TABLE`
@@ -400,6 +405,7 @@ The closure allows a function to "remember" the values of variables that were pr
 - **DCL** : Stands for *Data Control Languge*. Managing permissions and access control of database objects.
 
 #### Triggers
+
 <p align="left">
    <img src="http://pages.di.unipi.it/ghelli/didattica/bdldoc/B19306_01/server.102/b14220/img/cncpt076.gif" />
 </p>
@@ -407,6 +413,7 @@ The closure allows a function to "remember" the values of variables that were pr
 It can automatically execute a set of actions whenever a specific event occurs
 
 - **Creating Triggers** :
+  
 ```sql
 CREATE TRIGGER my_trigger 
 AFTER INSERT ON my_table
@@ -415,6 +422,7 @@ EXECUTE FUNCTION my_function();
 ```
 
 - **Trigger Functions** :
+  
 ```sql
 CREATE FUNCTION my_function() RETURNS
 TRIGGER AS $$
