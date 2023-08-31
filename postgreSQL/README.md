@@ -5,7 +5,7 @@
  It's a structured collection of data that is organized, stored, and managed to do CRUD operations 
 
 #### What is DBMS
- It stands for Data Base Management System. It's the software that allows CRUD operations. Eg :- MySQL , PostgreSQL
+ It stands for Data Base Management System. It's the software that allows CRUD operations. Eg:- MySQL, PostgreSQL
 
 #### Difference between DBMS and RDBMS
 In DBMS, the data is stored as a file, whereas in RDBMS, the data is stored in the form of tables
@@ -22,7 +22,7 @@ In DBMS, the data is stored as a file, whereas in RDBMS, the data is stored in t
 A group of tasks like insert, update, etc
 
 ```SQL
-BEGIN TRANSACTION
+BEGIN TRANSACTION;
 
 UPDATE account SET balance = balance -100 WHERE no = '123';
 UPDATE account SET balance = balance -200 WHERE no = '321';
@@ -31,10 +31,10 @@ COMMIT;
 
 ```
 
-> `BEGIN` and `START` has same functionality
+> `BEGIN` and `START` has the same functionality
 
 #### Objects
-The various database componets that store and manage data, such as tables,indexes, functions , etc
+The various database components that store and manage data, such as tables, indexes, functions, etc
 
 #### ACID properties
 Its 4 properties of a robust (well-designed and reliable for CRUD)  database
@@ -80,7 +80,7 @@ CREATE TABLE hello(
 key INT NOT NULL );
 ```
 
-- **Foreign key** : All values in this column match value in the other table's column
+- **Foreign key** : All values in this column match the value in the other table's column
 ```sql
 CREATE TABLE hello(
 key SERIAL PRIMARY KEY,
