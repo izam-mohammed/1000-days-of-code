@@ -1,6 +1,6 @@
 # Contributing Guidelines 🚀
 
-Thank you for your interest in contributing to the **100 Days of Code** repository! Your contributions are valued and help make this repository a valuable resource for all participants. To ensure a smooth and effective contribution process, please read and follow these guidelines. 🙌
+Thank you for your interest in contributing to the **1000 Days of Code** repository! Your contributions are valued and help make this repository a valuable resource for all participants. To ensure a smooth and effective contribution process, please read and follow these guidelines. 🙌
 
 ## Getting Started 🚀
 
@@ -10,8 +10,8 @@ Thank you for your interest in contributing to the **100 Days of Code** reposito
 
 ## Submitting Contributions 📝
 
-1. Ensure that your contribution aligns with the purpose of the repository, which is related to the **100 Days of Code** challenge. 💡
-2. Make sure you have completed the **100 Days of Code** challenge before submitting any code related to it. 💯
+1. Ensure that your contribution aligns with the purpose of the repository, which is related to the **1000 Days of Code** challenge. 💡
+2. Make sure you have completed the **1000 Days of Code** challenge before submitting any code related to it. 💯
 3. If you are contributing a new feature, create a folder with a descriptive name that explains the purpose of the feature. 📂
 4. If you are fixing a bug or improving existing code, create a branch with a name that reflects the issue you are addressing (e.g., `bugfix-issue-123`). 🐞
 
@@ -31,4 +31,4 @@ Thank you for your interest in contributing to the **100 Days of Code** reposito
 
 If you have any questions, concerns, or need assistance with the contribution process, feel free to reach out to us. You can contact us at izamdeveloper1@gmail.com. 📧
 
-We appreciate your contributions and dedication to making the **100 Days of Code** repository a valuable resource for all participants. Your efforts help create a supportive and collaborative environment for individuals on their coding journey. 👏
+We appreciate your contributions and dedication to making the **1000 Days of Code** repository a valuable resource for all participants. Your efforts help create a supportive and collaborative environment for individuals on their coding journey. 👏
