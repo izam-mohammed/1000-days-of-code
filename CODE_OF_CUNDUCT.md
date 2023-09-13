@@ -1,6 +1,6 @@
 # Code of Conduct
 
-As a participant in the **100 Days of Code** challenge, we want to ensure that this repository is a welcoming and inclusive space for all individuals. To achieve this goal, we have established the following code of conduct that outlines the expected behavior from all contributors, maintainers, and users of this repository. By participating in this challenge and engaging with this repository, you agree to abide by this code of conduct.
+As a participant in the **1000 Days of Code** challenge, we want to ensure that this repository is a welcoming and inclusive space for all individuals. To achieve this goal, we have established the following code of conduct that outlines the expected behavior from all contributors, maintainers, and users of this repository. By participating in this challenge and engaging with this repository, you agree to abide by this code of conduct.
 
 ## Be Respectful and Inclusive
 
