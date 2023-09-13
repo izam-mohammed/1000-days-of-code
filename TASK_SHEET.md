@@ -1,0 +1,181 @@
+### Tools in ML
+
+- NumPy
+- pandas
+- matplotlib
+- seaborn
+- sklearn
+  - Supervised
+  - Unsupervised
+  - Pre-processing
+  - Model Selection and Validation
+  - Feature Selection
+  - Pipelines
+  - Ensemble Methods
+- TensorFlow
+  - LSTM
+  - gru
+  - CNN
+  - RNN
+  - gan
+  - TfidfVectorizer
+  - Tensorboard
+  - Tensorflow Hub
+  - TensorFlow Serving
+  - Tensorflow extended
+- PyTorch
+- JAX
+- Deep Speed
+- cv2
+- NLTK
+  - Tokenization and Text Processing
+  - Text Analysis and Exploration
+- Yolo
+- spacy
+- transformers
+  - Attention is all you need
+  - Model Loading and Configuration
+  - Tokenization
+  - BERT
+  - GPT-3
+  - XLNet
+  - T5
+- DVC
+- Docker
+- Kubernetes
+- ONNX
+- mlflow
+- cntk
+- Caffe 2
+- MX net
+- gradio
+- rasa nlp
+- gensim
+- horovod
+- Allen NLP
+- fastai
+- TextBlob
+- H2O - 3
+- NNi
+- Terraform
+- Flair
+- Docano
+- apache
+  - Hadoop
+  - Casandra
+  - spark
+  - Flink
+  - storm
+  - hive
+  - pig
+  - beam
+  - Hortonworks Data Platform
+  - NiFi
+  - HBase
+  - Airflow
+  - Oozie
+  - Beam
+- Presto
+- Tableau
+- Ludwig
+- AWS
+  - SageMaker
+  - Lambda
+  - ECS (Elastic Container Service)
+  - EKS (Elastic Kubernetes Service)
+  - EC2 (Elastic Compute Cloud)
+  - S3 (Simple Storage Service)
+  - RDS (Relational Database Service)
+  - CloudWatch
+  - Step Functions
+  - CodePipeline
+  - CodeBuild
+  - ECR (Elastic Container Registry)
+  - EMR (Elastic MapReduce)
+  - Glue
+  - SQS (Simple Queue Service) and SNS (Simple Notification Service)
+  - EFS (Elastic File System) and FSx (File System for Windows/Linux)
+  - Identity and Access Management (IAM)
+- Agile methodologies
+- Dask
+- Bonobo
+- Petl
+- Gluon ETL
+- Fast ETL
+- SQLAlchemy
+- PyArrow
+- Perfect
+- Kedro
+- Kubeflow
+- Metaflow
+- Seldon Core
+- Knative
+- BentoML
+- Ray Tune
+- Hydra
+- Talos
+- Shap
+- clip
+- tpot
+
+### other languages
+
+- Julia
+- R
+
+### DSA
+
+**Data types**
+
+- Arr & str
+- linked list
+  - single
+  - double
+- stack
+- Que
+- Tree
+  - Binary
+  - Binary search
+  - AVL
+  - Red Black
+- Heap
+  - Min heap
+  - max heap
+  - priority queue
+- Hash table
+- Graph
+  - Directed
+  - Undirected
+- Trie
+
+**Algos**
+
+- searching
+  - Linear
+  - binary
+  - DFS
+  - BFS
+- sorting
+  - Bubble
+  - Selection
+  - Insertion
+  - Merge
+  - Quik
+  - Heap
+- graph
+  - Traverse
+  - Shortest path
+  - min span tree
+- DP
+  - Memorization and tabulation
+  - Longest common subsequence
+  - Fibonacci
+  - Knapsack
+- Backtracking
+  - N-queens problem
+  - Sudoku solver
+- Greedy
+  - Interval scheduling
+  - Huffman encoding
+- String
+- Bit manip
