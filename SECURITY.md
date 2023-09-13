@@ -1,6 +1,6 @@
 # Security 🛡️
 
-Welcome to the security practices and guidelines for the **100 Days of Code** repository. We take security seriously and want to ensure that your experience as a contributor and user of this repository is as safe as possible. Please familiarize yourself with the following security measures and best practices. If you have any security-related questions or concerns, feel free to contact us at izamdeveloper1@gmail.com.
+Welcome to the security practices and guidelines for the **1000 Days of Code** repository. We take security seriously and want to ensure that your experience as a contributor and user of this repository is as safe as possible. Please familiarize yourself with the following security measures and best practices. If you have any security-related questions or concerns, feel free to contact us at izamdeveloper1@gmail.com.
 
 ## Reporting Security Issues 🔒
 
@@ -22,4 +22,4 @@ Do not include sensitive information, such as private keys, passwords, or person
 
 If you have any security-related questions, concerns, or feedback, please contact our security team at izamdeveloper1@gmail.com.
 
-Thank you for your cooperation in keeping the **100 Days of Code** repository secure. Your commitment to responsible coding practices contributes to a safer and more enjoyable environment for everyone. 🙌
+Thank you for your cooperation in keeping the **1000 Days of Code** repository secure. Your commitment to responsible coding practices contributes to a safer and more enjoyable environment for everyone. 🙌
