@@ -118,10 +118,26 @@
 - clip
 - tpot
 
-### other languages
+### Other languages
 
 - Julia
 - R
+
+### Best YT channel to learn
+
+- [Yanic Klitcher](https://www.youtube.com/@YannicKilcher)
+- [Krish Naik](https://www.youtube.com/@krishnaik06)
+- [sentdex](https://www.youtube.com/@sentdex)
+- [Code Emporium](https://www.youtube.com/@CodeEmporium)
+- [Ritvik](https://www.youtube.com/@ritvikmath)
+- [Nicholas](https://www.youtube.com/@NicholasRenotte)
+- [Andrej](https://www.youtube.com/@AndrejKarpathy)
+- [Statquest](https://www.youtube.com/@statquest)
+- [Neetcode](https://www.youtube.com/@NeetCode)
+- [gkcs](https://www.youtube.com/@gkcs)
+- [1blue1brown](https://www.youtube.com/@3blue1brown)
+- [Aladhin](https://www.youtube.com/@AladdinPersson)
+- [Venelin](https://www.youtube.com/@venelin_valkov)
 
 ### DSA
 
@@ -178,4 +194,4 @@
   - Interval scheduling
   - Huffman encoding
 - String
-- Bit manip
+- Bit manipulation
