@@ -1,6 +1,6 @@
-# 100 Days of Code Challenge 🚀
+# 1000 Days of Code Challenge 🚀
 
-> 🚀 Join me in my journey of coding for 100 days! 🚀
+> 🚀 Join me in my journey of coding for 1000 days! 🚀
 
 Welcome to my 100 Days of Code challenge repository! This is a personal project where I commit to coding every single day for the next 100 days. From small code snippets to ambitious projects, this repository will showcase my progress, learning, and growth as a developer.
 
