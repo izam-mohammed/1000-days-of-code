@@ -208,3 +208,77 @@
   - Huffman encoding
 - String
 - Bit manipulation
+
+### Mathematics and stati
+
+- Mean, Median, Mode
+- Covariance, correlation
+- Standard Deviation, Variance, Mean Absolute Deviation
+- Accuracy for regression
+  - MSE
+  - MAE
+  - RMSE
+  - R2
+- Z-Score
+- Standardization and Normalization
+- Accuracy for model
+  - Accuracy
+  - Precision
+  - Recall
+  - F1 score
+  - Specificity
+  - False Positive Rate
+- Quartile, range
+- IQR, IQR ratio
+- skewness
+- Kurtosis
+- Probability of an event
+- Bayes Theorem
+- Matrix operations
+- Transpose
+- Determinant
+- Inverse and adjacent matrix
+- Eigenvalues and eigenvectors
+- Slope, Linear System solution
+- Types of matrix
+- Activations
+  - Sigmoid
+  - Tanh
+  - ReLu
+  - Leaky ReLu
+  - Swish
+  - Softmax
+- PMF, PDF, CDF
+- Central Limit Theorem
+- Various Sampling methods
+- Null hypothesis and Alternative Hypothesis
+- p-value, critical value, significance value
+- Decision Rule
+- Type 1 error, Type 2 error
+- Tests for p-value
+  - Z-test
+  - T-test
+  - Chi-square Test
+  - ANNOVA
+- Confidence Interval, standard error
+- Permutation and Combination
+- Probability Distribution
+  - Binomial
+  - Normal
+  - Poison
+  - Exponential
+- Empirical formula
+- Derivative of a function
+- Graph Theory
+- Rules in Calculus
+  - Power rule
+  - Constant rule
+  - Sum and Difference rule
+  - Product Rule
+  - Quotient rule
+  - Chain Rule
+- Indefinite Integral
+- Definite Integral
+- Partial Derivative
+- Gradients and Jacobian Matrices
+- Hessian Matrix
