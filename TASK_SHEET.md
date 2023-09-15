@@ -118,10 +118,23 @@
 - clip
 - tpot
 
-### Other languages
+### Languages
 
+- Python
 - Julia
 - R
+- SQL
+- Scala
+- Bash
+- C/C++
+- JavaScript
+  - D3.js
+  - Transformers.js
+  - Tensorflow.js
+  - Brain.js
+  - ConvNetJs
+  - ml5.js
+  - Plotly.js
 
 ### Best YT channel to learn
 
