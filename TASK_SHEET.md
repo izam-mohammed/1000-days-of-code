@@ -449,6 +449,63 @@
 - [Aladhin](https://www.youtube.com/@AladdinPersson)
 - [Venelin](https://www.youtube.com/@venelin_valkov)
 
+### ML Algorithms
+
+- Simple Liniear Regression
+- Multiple Linear Regression
+- Polynomial Regression
+- Ridge Regression
+- Lasso Regression
+- ElasicNet Regression
+- Logistic Regression
+- Support Vector Machine Regression
+- Dicision Tree Regression
+- Random Forest Regression
+- Gredient Boosting Regression
+  - XG boost
+  - LightGBM
+- KNN Regression
+- Bayesian Regression
+- Linear Discriminant Fuction (LDA)
+- Support Vector Machine (SVM) classifier
+- Naive Bayes Classifier
+- Decision Tree Classifier
+- Gredient Boost Classifier
+- Random Forest Classifier
+- KNN Classifier
+- Ridge Classifier
+- Perceptron
+- Cat Boost
+- Ada Boost
+- K-means Clustering
+- Hierarchiel Clustering
+- DBSCAN
+- PCA
+- Mean Shift clustering
+- Gussian Mixture Model
+- Self Organizing Maps (SOM)
+- t-SNE
+- Auto encoders
+- Multi-layer perceptron
+- ANN
+- CNN
+- RNN
+- Word2Vec
+- Glove 
+- LSTM
+- GRU
+- Transformers
+- Transformer models
+  - GPT
+  - BERT
+  - YOLO
+- Q-Learning
+- Deep Q Network
+- Policy Gradients
+- Proximal Policy Optimization
+- Actor critic methods
+
+
 ### DSA
 
 **Data types**
