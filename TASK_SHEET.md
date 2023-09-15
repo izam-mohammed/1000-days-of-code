@@ -1,7 +1,84 @@
 ### Tools in ML
 
 - NumPy
+  - Array Creation
+    - `numpy.array`
+    - `numpy.zeros` and `np.ones`
+    - `numpy.empty`
+    - `numpy.arange` and `numpy.linspace`
+    - `numpy.random.rand` ,`numpy.random.randn`, `numpy.random.shuffle`, `numpy.random.choice`
+  - Array Manipulation
+    - `numpy.reshape` and `numpy.resize`
+    - `numpy.concatenate` and `numpy.vstack`
+    - `numpy.hstack`
+    - `numpy.split`
+    - `numpy.transpose`
+    - `numpy.flatten` and `numpy.ravel`
+    - `numpy.roll` and `numpy.rollaxis`
+  - Array Indexing and slicing
+    - `array [0]`, `array[1:3]`
+    - 'numpy.where'
+  - Array operations
+    - Arithematical operations like addition, subtraction ,etc
+    - `numpy.exp`, `numpy.log`, `numpy.cos`, etc
+    - `numpy.dot` , `numpy.matmul`
+    - `numpy.min`, `numpy.max`, `numpy.mean`, `numpy.std`, etc
+    - `numpy.sort`, `numpy.argsort`
+    - `numpy.unique`
+  - Liniear Algebra
+    - `numpy.linalg.inv`
+    - `numpy.linalg.det`
+    - `numpy.linalg.eig` and `numpy.linalg.svd`
+  - Statistical Fn
+    - `numpy.percentile`, `numpy.std`, etc
+    - `numpy.histogram`
+  - File Input/ Output
+    - `numpy.save` and `numpy.load`
+    - `numpy.savetxt` and `numpy.loadtxt`
+  - Advanced operations
+    - `numpy.apply_along_axis`
+    - `numpy.vectorize`
+  - Masked Arrays
+    - `numpy.ma.masked_array`
+    - `numpy.ma.masked_invalid`
+    - `numpy.ma.masked_where`
+  - Handle Missing data
+    - `numpy.isnan`
+    - `numpy.nan_to_num`
+    - `numpy.nanmean` and `numpy.nanmedian`
 - pandas
+  - DataFrame and Series Creation
+    - `pd.DataFrame()`
+    - `pd.Series()`
+    - `pd.read_csv()`, `pd.read_excel()`, `pd.read_sql`
+    - `pd.DataFrame.from_dict()`
+  - Data Inpection
+    - `.head()`
+    - `.info()`
+    - `.describe()`
+    - `.shape`
+  - Data Selection and Indexing
+    - `.loc[]`, `.iloc[]`
+    - `.at[]`, `.iat[]`
+    - `.isin()`
+    - `.query()`
+    - `.set_index()`, `.reset_index()`
+  - Data Manipulation and Transformation
+    - `.copy()`
+    - `.drop()`
+    - `.fillna()`
+    - `.groupby()`
+    - `.pivot_table()`
+    - `.melt()`
+    - `.apply()`, `.applymap()`
+    - `.map()`, `.replace()`
+    - `.sort_values()`
+    - `.pivot()`
+  - Data Aggregation and Statistics
+  - Data Cleaning
+  - Time Series and Date
+  - Data visualize
+  - Data I/O
 - matplotlib
 - seaborn
 - sklearn
@@ -121,20 +198,240 @@
 ### Languages
 
 - Python
+  - Datatypes
+  - comments
+  - If , else
+  - Operators
+  - Modules and Packages
+  - Continue, break
+  - Loops
+    - for, for with else
+    - while , while with else
+  - Functions
+    - Inbuilt
+    - User defined
+      - Static
+      - Normal
+      - Class fn
+  - Classe and Object
+    - Constructor and Destructor
+    - Magic Methods
+    - Inheritance
+    - Polymorphism
+  - Iterators
+  - Coprehensions
+    - Dict
+    - List
+    - Set
+    - Generator
+  - Generators
+  - doc string
+  - Decorator
+  - Lambda Functions
+  - Meta Class
+  - Default parameters
+  - Exception handling
+  - Multithreading
+  - Virtual Environments
+  - Main Libraries
+    - os
+    - sys
+    - math
+    - requests
+    - urllib
+    - re (regex)
+    - pickle
+    - socket
+    - collections
+    - sqlite3
+    - Data Science Libraries
 - Julia
+  - REPL (Read-Eval_Print Loop)
+  - Package, Package Manager
+  - Struct
+  - Module
+  - Fuction
+  - Type
+  - Abstract Type
+  - Multiple Dispatch
+  - Duck Typing
+  - Immutable and Mutable
+  - Vector and Matrix
+  - Tuple, String, Array
+  - Macro
+  - Broadcasting
+  - Unicode
+  - Julia Set
+  - JIT (Just In Time) Compilation
+  - Garbage Collection
+  - Exception
+  - Distributed and Parellel Computing
+  - Type parameterization
+  - String Interpolation and concatenation
+  - Generator
+  - DataFrames
+  - Plotting
+  - Liniear Algebra
+  - Meta programming
 - R
+  - Vector
+  - Data Frame
+  - Variable
+  - Fuction
+  - Package
+  - Library
+  - CRAN(Comprehensive R Archieve Network)
+  - Data Cleaning
+  - Visualisation
+  - Statistical Analysis
+  - Data Import and Export
+  - Data Exploration
+  - Data Transformation
+  - Hypothesis Testing
+  - Regression Analysis
+  - ML and EDA
+  - Statistical Graphics
+  - RMarkdown
+  - Shiny
+  - Tidyverse
+  - Cross Validation
+  - Various Analysis
 - SQL
+  - Database
+  - Table, row , column
+  - Schema
+  - Primary key, Foreign Key, Candidate Key, Composite key
+  - Indexing
+  - Query , SQL statements
+  - Normalisation and Denormalization
+  - View
+  - Stored Procedure
+  - Transaction
+  - ACID and BASE
+  - JOIN
+  - Aggregate Functions
+  - Sub query
+  - DDL, DML, DCL
+  - Triggers
+  - SQL injection
+  - Backup and Restore, Warehousing
+  - OlAP, OLTP
 - Scala
+  - Immutable and Mutable
+  - Val
+  - Data Types
+  - Type Inference
+  - Pattern Matching
+  - Fuction
+  - Higher-Order Function
+  - Lambda Fn
+  - Collections
+  - Option
+  - Trait
+  - Class
+  - Object
+  - Companion Object, Singleton Object
+  - Case Class
+  - Type Parameter (Generics)
+  - Implicit Conversations and Parameters
+  - Future and Promise
+  - For comprehension
+  - Concurrency
+  - Sbt (Scala Build Tool)
+  - scala.js
+  - Akka
+  - Play Framework
+  - Spark
 - Bash
+  - Shell
+  - Prompt
+  - Argument
+  - Option (Flag)
+  - Environment Variable
+  - Variable
+  - Standard Input, Standard Output, Standard Error
+  - Redirection
+  - Pipe
+  - Wildcards
+  - Script Execution
+  - Permissions
+  - Variable Expansion
+  - Control Structures
+    - if
+    - for
+    - while
+    - case
+  - Exit Code
+  - Function
+  - Backticks
+  - History
+  - Alias
+  - Escape Sequence
+  - File permission mode
+  - Tilde
+  - Quoting
 - C/C++
+  - Variable
+  - Data Type
+  - Function
+  - Pointer
+  - Array
+  - Conditional Statements
+  - Loop
+  - Operator
+  - Structure and Union
+  - Header files
+  - Library function
+  - Input/ output
+  - comment 
+  <br>**cpp --**
+  - Class
+  - Object
+  - Inheritance
+  - Polymorphism
+  - Encapsulation
+  - Constructor and Destructor
+  - Operator Overloading
+  - Template
+  - Standard Template Library
+  - Namespace
+  - Friendf Fuction
+  - Exception Handling
+  - Reference
 - JavaScript
-  - D3.js
-  - Transformers.js
-  - Tensorflow.js
-  - Brain.js
-  - ConvNetJs
-  - ml5.js
-  - Plotly.js
+  - Variables
+  - Data Types
+  - Operators
+  - if, else, switch
+  - loops
+  - functions
+  - Array
+  - Object
+  - Event handling
+  - DOM
+  - closure
+  - Callback Function
+  - Promises
+  - Async /Await
+  - Scope
+  - Hoisting
+  - Prototype
+  - Closure
+  - Module System
+  - Strict Mode
+  - Type coercion
+  - NaN
+  - JSON
+  - ECMA script
+  - Main Libraries
+    - D3.js
+    - Transformers.js
+    - Tensorflow.js
+    - Brain.js
+    - ConvNetJs
+    - ml5.js
+    - Plotly.js
+- YAML
 
 ### Best YT channel to learn
 
