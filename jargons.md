@@ -7,5 +7,14 @@
 - stop words - words have little no meaning eg:- in , and ...
 - tokenization - splitting a text into parts
 - Ngrams - tokens of any number of consicutive
-- Trigrams
-- Bigrams
+- Trigrams - three word combination from word
+- Bigrams - 2 word combination from word
+- Ngrams - N word combination from word
+- stemming - reduce to the base word with some rule
+- lamentation - reduce to the base word with lingustic knowledge
+- Name Entity recognition - what is the category of the word
+- Sytax Tree - tree representation of syntactic structure of sentences
+- chunking - picking up individual peieces of info and grouping
+- Bag of words - frequency of each word
+- One Hot Encoding - No of values cols
+- TF-IDF - term frequency-inverse document frequency 
