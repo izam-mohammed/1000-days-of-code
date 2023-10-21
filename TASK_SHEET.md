@@ -1,84 +1,7 @@
 ### Tools in ML
 
 - NumPy
-  - Array Creation
-    - `numpy.array`
-    - `numpy.zeros` and `np.ones`
-    - `numpy.empty`
-    - `numpy.arange` and `numpy.linspace`
-    - `numpy.random.rand` ,`numpy.random.randn`, `numpy.random.shuffle`, `numpy.random.choice`
-  - Array Manipulation
-    - `numpy.reshape` and `numpy.resize`
-    - `numpy.concatenate` and `numpy.vstack`
-    - `numpy.hstack`
-    - `numpy.split`
-    - `numpy.transpose`
-    - `numpy.flatten` and `numpy.ravel`
-    - `numpy.roll` and `numpy.rollaxis`
-  - Array Indexing and slicing
-    - `array [0]`, `array[1:3]`
-    - 'numpy.where'
-  - Array operations
-    - Arithematical operations like addition, subtraction ,etc
-    - `numpy.exp`, `numpy.log`, `numpy.cos`, etc
-    - `numpy.dot` , `numpy.matmul`
-    - `numpy.min`, `numpy.max`, `numpy.mean`, `numpy.std`, etc
-    - `numpy.sort`, `numpy.argsort`
-    - `numpy.unique`
-  - Liniear Algebra
-    - `numpy.linalg.inv`
-    - `numpy.linalg.det`
-    - `numpy.linalg.eig` and `numpy.linalg.svd`
-  - Statistical Fn
-    - `numpy.percentile`, `numpy.std`, etc
-    - `numpy.histogram`
-  - File Input/ Output
-    - `numpy.save` and `numpy.load`
-    - `numpy.savetxt` and `numpy.loadtxt`
-  - Advanced operations
-    - `numpy.apply_along_axis`
-    - `numpy.vectorize`
-  - Masked Arrays
-    - `numpy.ma.masked_array`
-    - `numpy.ma.masked_invalid`
-    - `numpy.ma.masked_where`
-  - Handle Missing data
-    - `numpy.isnan`
-    - `numpy.nan_to_num`
-    - `numpy.nanmean` and `numpy.nanmedian`
 - pandas
-  - DataFrame and Series Creation
-    - `pd.DataFrame()`
-    - `pd.Series()`
-    - `pd.read_csv()`, `pd.read_excel()`, `pd.read_sql`
-    - `pd.DataFrame.from_dict()`
-  - Data Inpection
-    - `.head()`
-    - `.info()`
-    - `.describe()`
-    - `.shape`
-  - Data Selection and Indexing
-    - `.loc[]`, `.iloc[]`
-    - `.at[]`, `.iat[]`
-    - `.isin()`
-    - `.query()`
-    - `.set_index()`, `.reset_index()`
-  - Data Manipulation and Transformation
-    - `.copy()`
-    - `.drop()`
-    - `.fillna()`
-    - `.groupby()`
-    - `.pivot_table()`
-    - `.melt()`
-    - `.apply()`, `.applymap()`
-    - `.map()`, `.replace()`
-    - `.sort_values()`
-    - `.pivot()`
-  - Data Aggregation and Statistics
-  - Data Cleaning
-  - Time Series and Date
-  - Data visualize
-  - Data I/O
 - matplotlib
 - seaborn
 - sklearn
@@ -448,6 +371,21 @@
 - [1blue1brown](https://www.youtube.com/@3blue1brown)
 - [Aladhin](https://www.youtube.com/@AladdinPersson)
 - [Venelin](https://www.youtube.com/@venelin_valkov)
+
+### Useful Links for projects
+
+- [Secret 1](https://medium.com/coders-camp/60-python-projects-with-source-code-919cd8a6e512)
+- [Secret 2](https://www.youtube.com/watch?v=QM5XDc4NQJo&list=PL7yh-TELLS1G9mmnBN3ZSY8hYgJ5kBOg-)
+- [Secret 3](https://www.youtube.com/playlist?list=PLgNJO2hghbmiXg5d4X8DURJP9yv9pgjIu)
+- [Secret 4](https://www.youtube.com/watch?v=dPmH3G9NQtY&pp=ygUWZGVlcCBsZWFybmluZyBwcm9qZWN0cw%3D%3D)
+- [Secret 5](https://www.youtube.com/playlist?list=PLKnIA16_RmvY5eP91BGPa0vXUYmIdtfPQ)
+- [Secret 6](https://www.youtube.com/playlist?list=PLQ52otQ1tqfLHm_r3Mq_NNl7_C4TySqVy)
+- [Secret 7](https://github.com/Jcharis/Machine-Learning-Web-Apps)
+- [Secret 8](https://data-flair.training/blogs/machine-learning-project-ideas/)
+- [Secret 9](https://medium.com/coders-camp/60-python-projects-with-source-code-919cd8a6e512)
+- [Secret 10](https://amankharwal.medium.com/130-python-projects-with-source-code-61f498591bb)
+- [Secret 11](https://www.geeksforgeeks.org/machine-learning-projects/)
+- [Secret 12](https://www.youtube.com/watch?v=OXi4T58PwdM&list=RDQME_vdrx6fihk&index=1)
 
 ### ML Algorithms
 
