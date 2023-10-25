@@ -386,6 +386,7 @@
 - [Secret 10](https://amankharwal.medium.com/130-python-projects-with-source-code-61f498591bb)
 - [Secret 11](https://www.geeksforgeeks.org/machine-learning-projects/)
 - [Secret 12](https://www.youtube.com/watch?v=OXi4T58PwdM&list=RDQME_vdrx6fihk&index=1)
+- [Secret 13](https://github.com/kubeflow/examples)
 
 ### ML Algorithms
 
