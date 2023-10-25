@@ -17,4 +17,6 @@
 - chunking - picking up individual peieces of info and grouping
 - Bag of words - frequency of each word
 - One Hot Encoding - No of values cols
-- TF-IDF - term frequency-inverse document frequency 
+- TF-IDF - term frequency-inverse document frequency
+- Correlation - relation between 2 values
+- LLM - Large Language model
