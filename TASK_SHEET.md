@@ -149,6 +149,7 @@
 - [Secret 11](https://www.geeksforgeeks.org/machine-learning-projects/)
 - [Secret 12](https://www.youtube.com/watch?v=OXi4T58PwdM&list=RDQME_vdrx6fihk&index=1)
 - [Secret 13](https://github.com/kubeflow/examples)
+- [Secret 14](https://www.youtube.com/playlist?list=PL1v8zpldgH3pR7LPuidEZK68kS6AaU1y7)
 
 ### ML Algorithms
 
