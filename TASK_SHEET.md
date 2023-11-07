@@ -144,12 +144,11 @@
 - [Secret 6](https://www.youtube.com/playlist?list=PLQ52otQ1tqfLHm_r3Mq_NNl7_C4TySqVy)
 - [Secret 7](https://github.com/Jcharis/Machine-Learning-Web-Apps)
 - [Secret 8](https://data-flair.training/blogs/machine-learning-project-ideas/)
-- [Secret 9](https://medium.com/coders-camp/60-python-projects-with-source-code-919cd8a6e512)
-- [Secret 10](https://amankharwal.medium.com/130-python-projects-with-source-code-61f498591bb)
-- [Secret 11](https://www.geeksforgeeks.org/machine-learning-projects/)
-- [Secret 12](https://www.youtube.com/watch?v=OXi4T58PwdM&list=RDQME_vdrx6fihk&index=1)
-- [Secret 13](https://github.com/kubeflow/examples)
-- [Secret 14](https://www.youtube.com/playlist?list=PL1v8zpldgH3pR7LPuidEZK68kS6AaU1y7)
+- [Secret 9](https://amankharwal.medium.com/130-python-projects-with-source-code-61f498591bb)
+- [Secret 10](https://www.geeksforgeeks.org/machine-learning-projects/)
+- [Secret 11](https://www.youtube.com/watch?v=OXi4T58PwdM&list=RDQME_vdrx6fihk&index=1)
+- [Secret 12](https://github.com/kubeflow/examples)
+- [Secret 13](https://www.youtube.com/playlist?list=PL1v8zpldgH3pR7LPuidEZK68kS6AaU1y7)
 
 ### ML Algorithms
 
