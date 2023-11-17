@@ -1,6 +1,6 @@
 # Contributing Guidelines 🚀
 
-Thank you for your interest in contributing to the **1000 Days of Code** repository! Your contributions are valued and help make this repository a valuable resource for all participants. To ensure a smooth and effective contribution process, please read and follow these guidelines. 🙌
+Thank you for your interest in contributing to the **1000 Days of Code** repository! Your contributions are valued and help make this repository a valuable resource for all participants. To ensure a smooth and effective contribution process, please read and follow these guidelines. 🙌 
 
 ## Getting Started 🚀
 
