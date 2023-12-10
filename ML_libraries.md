@@ -1,0 +1,378 @@
+## Curated List of ML libraries and methods
+
+basic
+-----
+- ***pandas***
+    - pd.Series(data, index)
+    - pd.DataFrame(data, index, columns)
+    - pd.read_csv(path)
+    - df.to_csv(path)
+    - df.head(n)
+    - df.sample(n)
+    - df.describe(include=[])
+    - df.info()
+    - df.tail(n)
+    - df.isna().sum()
+    - df.shape
+    - df.columns
+    - df[column]
+    - df.loc[row, col] --> label
+    - df.iloc[row, col]
+    - df[df['column'] > value]
+    - df.sort_values(by='column)
+    - df.drop(['columns'], axis=1)
+    - df.fillna(value)
+    - df.replace(to_replace, values)
+    - df.groupby('column).method()
+    - df.aggregate(func) --> change name in groupby
+    - pd.concat([df1, df2, df3], axis)
+    - pd.merge(left, right, how, on)
+    - pd.get_dummies(df)
+    - df.plot(kind)
+    - df.corr(numeric_only=True)
+
+- ***numpy***
+    - np.array(obj, dtype)
+    - arr.shape
+    - arr.reshape(newshape)
+    - np.arrange(start, stop, step, dtype)
+    - np.zeros(shape, dtype, order)
+    - np.ones(shape, dtype, order)
+    - np.linespace(start, end, no)
+    - arr[index]
+    - arr[start:stop:step]
+    - np.sum(arr, axis)
+    - np.mean(arr, axis)
+    - np.median(arr, axis)
+    - np.std(arr, axis)
+    - np.random.rand()
+    - np.random.randint(low, high, size)
+    - np.concatenate((a1, a2), axis)
+    - np.vstack(tup)
+    - np.hstack(tup)
+    - np.split(arr, indices, axis)
+    - arr.flatten()
+    - arr.T
+    - arr.min(axis)
+    - arr.max(axis)
+    - arr.argmin(axis)
+    - arr.argmax(axis)
+    - arr.percentile(q, axis)
+    - arr.var(axis)
+    - arr.sort(axis, kind, order)
+    - arr.argsort(axis, kind, order)
+    - np.load()
+    - np.save()
+
+- ***matplotlib***
+    - plt.plot(x, y, format, label)
+    - plt.scatter(x, y, s=None, marker=None, cmap=None)
+    - plt.bar(x, height, width=0.8)
+    - plt.hist(x, bins=None)
+    - plt.pie(x, labels)
+    - plt.xlabel(label)
+    - plt.ylabel(label)
+    - plt.title(title)
+    - plt.legend()
+    - plt.grid()
+    - plt.subplot(nrows, ncols)
+    - plt.tight_layout()
+    - plt.show()
+    - plt.savefig(file_name)
+    - plt.imshow(x, cmap=None) --> images
+    
+- ***sklearn***
+    - sklearn.preprocessing
+        - StandardScaler()
+        - MinMaxScaler()
+        - LabelEncoder()
+    - sklearn.model_selection
+        - train_test_split
+        - GridSearchCV
+        - RandomizedSearchCV
+        - cross_val_score
+    - sklearn.linear_model
+        - LinearRegression
+        - LogisticRegression
+        - Ridge
+    - sklearn.svm
+        - SVR
+        - SVC
+    - sklearn.naive_bayes
+        - GausianNB
+        - MultinomialNB
+    - sklearn.neighbours
+        - KNeighborsClassifier
+    - sklearn.tree
+        - DecisionTreeClassifier
+        - DecisionTreeRegressor
+    - sklearn.ensemble
+        - RandomForestClassifier
+        - RandomForestRegressor
+        - VotingClassifier
+    - sklearn.cluster
+        - KMeans
+        - DBSCAN
+        - AgglomerativeClustering
+    - sklearn.decomposition
+        - PCA
+    - sklearn.metrics
+        - accuracy_score
+        - precision_score
+        - recall_score
+        - mean_squared_error
+        - r2_score
+    - sklearn.feature_extraction
+        - CountVectorizer
+        - TfidfTransformer
+    - sklearn.pipeline
+        - Pipeline
+    - sklearn.compose
+        - ColumnTransformer
+    - sklearn.base
+        - BaseEstimator
+        - ClassfierMixin
+        - RegressorMixin
+        - TransformerMixin
+    
+
+stats
+-----
+- scipy
+- statsmodels
+- imbalanced learn
+- patsy
+
+visualise
+---------
+- plotly
+- bokeh
+- seaborn
+- Altair
+- GGplot
+- Bokeh
+- pygal
+- Geoplotlib
+- tabulate
+- ipyvolume
+- dash
+- panel
+
+model interpret
+--------------
+- eli5
+- lime
+- shap
+- yellowbrich
+- alibi
+- lucid
+- tf-explain
+
+Deep learning
+-------------
+- pytorch
+- Tensorflow
+- Keras
+- Tensorflow serving
+- Keras tuner
+- JAX
+- Huggingface 
+- ONNX
+- Horovod
+- chainer
+- nn_builder
+- Jina AI
+
+DP tools
+--------
+- Nebuly
+- Netron
+- Tensorboard
+- Tensorwatch
+- CML
+- MLEM
+
+Auto ML
+-------
+- Auto ML
+- H@O ai
+- TPOT
+- Pycaret
+- FLAML
+- EvalML
+- AutoKeras
+- MLBox
+- Auto-sklearn
+- MLJAR
+- lazypredict
+- AutoGluon
+
+Hyperprameter tuning
+-------------------
+- Ray-Tune
+- Optuna
+- Hyperopt
+- mlmachine
+- scikit-optimize
+
+NLP
+---
+- Spacy
+- NLTK
+- TextBlob
+- Gensim
+- Stanford NLP
+- Allen NLP
+- Flair 
+- Rasa NLP
+- Fast Text
+- polyglot
+- Core NLP
+- pattern
+- open nlp
+- chatter bot
+- DeepPavlov
+- PyNLPl
+- Dialogue flow
+
+preview and api
+-------
+- streamlit
+- gradio
+- django
+- flask
+
+computer vision
+---------------
+- cv2
+- open cv
+- Dlib
+- Sk image
+- Pillow
+- Deep face
+- YOLO
+- Albumentation
+- Mahotas
+- SimpleCV
+- VLFeat
+- openface
+- face-recognition
+
+time series
+-----------
+- sktime
+- tsfresh
+- Kats
+- Darts
+- prophet
+- AutoTS
+- Neuron
+
+auto EDA
+--------
+- missingno
+- DTale
+- Pandas profiling
+- sweetviz
+- Autoviz
+- dataprep
+- KLib
+- dabl
+- SpeedML
+
+MLOps
+-----
+- MLflow
+- Kubeflow
+- Comet ML
+- Prefect
+- Meta flow
+- Kedro
+- Tensorflow serving
+- ZenML
+- Bento ML
+- Terraform
+- weights and bias
+
+Scrapping
+---------
+- requests
+- BeutifulSoup
+- Selenium
+- scrapy
+- autoscraper
+- grab
+
+bigdata
+-------
+- Pyspark
+- Dask
+- PyFlink
+- MLlib
+
+LLM
+---
+- langchain
+- cohere
+- Huggingface
+- python-llm
+- open llm
+- dify
+- llama_index
+- haystck
+- chainlit
+- gptcache
+
+vector db
+---------
+- pinecone
+- chroma
+- weaviate
+- faiss
+- qdrand
+
+LLMOps
+------
+- agenta
+- Arize-Phoenix
+- BudgeML
+- CometLLM
+- deeplake
+- Dify
+- D stack
+- Embedchain
+- LangFlow
+- LangKit
+- Lite LLM
+- magentic
+- Pezzo
+
+tools
+-----
+- Flake8
+- black
+- git
+- dvc
+- docker
+- PostgreSQL
+- mongoDB
+- aws EC2
+- sagemaker
+
+common
+------
+- collections
+- os
+- typing
+- datetime
+- math
+- sys
+- random
+- shutil
+- subprocess
+- re
+- pathlib
+- wget
+- faker
+- pyperclip
+- logging
