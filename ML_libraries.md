@@ -148,6 +148,18 @@ visualise
 - plotly
 - bokeh
 - seaborn
+    - sns.stripplot(x, y, data, hue) -> scatter plot
+    - sns.histplot(x, y, data=df, hue, stat='count', bin='auto')
+    - sns.kdeplot(data, x, y, hue)
+    - sns.regplot(x, y, data, scatter=True)
+    - sns.heatmap(data, annot=True)
+    - sns.clustermap(data, cmap='viridis')
+    - sns.pairplot(data, hue)
+    - sns.FaceGrid
+    - sns.scatterplot(data, x, y, hue)
+    - sns.boxplot(x, y, hue, data)
+    - sns.PairGrid
+
 - Altair
 - GGplot
 - Bokeh
