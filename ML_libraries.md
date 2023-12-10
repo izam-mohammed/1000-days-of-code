@@ -134,8 +134,7 @@ basic
         - ClassfierMixin
         - RegressorMixin
         - TransformerMixin
-    
-
+        
 stats
 -----
 - scipy
@@ -318,6 +317,7 @@ Scrapping
 bigdata
 -------
 - Pyspark
+- Hadoop
 - Dask
 - PyFlink
 - MLlib
@@ -361,10 +361,33 @@ LLMOps
 
 tools
 -----
+- wget
+    - wget url -O destination  --> run this for download
 - Flake8
+    - flake8 .
+    - flake8 myfile.py
+    - flake8 --count myfile.py  --> number of violations
+    - flake8 --show-source myfile.py
+    - flake8 --format=pylint myfile.py
 - black
+    - black .
+    - black myfile.py
 - git
+    - git init
+    - git config
+    - git clone
+    - git status
+    - git add
+    - git reset
+    - git diff
+    - git commit -m "msg"
+    - git git log --oneline -n --graph
+    - git branch "brach name"
+    - git push
+    - git pull
 - dvc
+    - dvc init
+    - dvc repro --> run the pipeline
 - docker
 - PostgreSQL
 - mongoDB
@@ -374,17 +397,94 @@ tools
 common
 ------
 - collections
+    - Counter
+    - defaultdict
+    - OrderedDict
+    - namedtuple
+    - deque
 - os
+    - os.getcwd()
+    - os.chdir(path)
+    - os.listdir(path='.')
+    - os.mkdir(path)
+    - os.remove(path)
+    - os.rmdir(path)
+    - os.rename(src, new)
+    - os.path.join(path, *paths)
+    - os.path.exists(path)
+    - os.path.isfile(path)
+    - os.getenv(key, default=None)
+    - os.system(command)
+    - os.path.getsize(path)
 - typing
+    - Any
+    - Union
+    - Optional
+    - List
+    - Tuple
+    - Dict
+    - Set
+    - Type
+
 - datetime
+    - datetime.now()
+    - datetime.time
+    - datetime.date
 - math
+    - math.pi
+    - math.e
+    - math.sqrt(x)
+    - math.pow(x, y)
+    - math.log(x)
+    - math.log2(x)
+    - math.isnan(x)
 - sys
+    - sys.argv
+    - sys.version --> python version
+    - sys.getsizeof("hai")
+    - sys.modules.keys()
 - random
+    - random.seed(a)
+    - random.random()
+    - random.choice(list)
+    - random.shuffle(list)
+    - rendom.sample(population, k)
+    - random.gauss(mean, std)
 - shutil
-- subprocess
+    - shutil.copy(src, to_path)
+    - shutil.move(src, to_path)
+    - shutil.make_archive(base_name, format, root_dir=None, base_dir=None)
+    - shutil.unpack_archieve(file_name, extract_dir, base_dir)
 - re
+    - re.compile(pattern)
+    - re.match(pattern, string)
+    - re.search(pattern, string)
+    - re.fullmatch(pattern, string)
+    - re.findall(pattern, string)
+    - re.split(pattern, string)
+    - re.purge() -> remove all cache
 - pathlib
-- wget
-- faker
+    - Path()
+    - .exist()
+    - .is_file()
+    - .is_dir()
+    - .parent
 - pyperclip
-- logging
+    - pyperclip.copy(text)
+    - pyperclip.paste()
+- box
+    - box.ConfigBox(dict)
+    - box.from_json(filename)
+- csv
+    - csv.reader(file)
+    - csv.writer(file).writerow(word)
+- json
+    - json.dump(obj, file_path)
+    - json.load(file_path)
+- unittest
+    - unittest.TestCase
+    - assertEqual
+    - assertTrue
+    - assertFalse
+    - assertRises(error)
+    - unittest.main()
